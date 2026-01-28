@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P.I.A.R III. Detector d'Objectes</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <h1><img src="icons/icon.png" style="width: 2em;"> P.I.A.R III. IA Animals/Persones</h1>
+  
+  <div id="video-container">
+    <video id="video" autoplay muted playsinline></video>
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <div id="data-panel">Detecció: <span id="label">--</span> | Confiança: <span id="score">--</span>%</div>
+
+  <div id="controls">
+    <button id="connectBtn">🔵 Connectar</button>
+    <button id="fullscreenBtn">⛶ Pantalla completa</button>
+    <div id="status">⏳ Esperant IA...</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+  <script src="./js/bluetooth_uart.js"></script>
+  <script src="./js/object_tracking.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
